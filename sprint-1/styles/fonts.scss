@@ -13,7 +13,19 @@
     src: url("../assets/fonts/Avenir/AvenirNextLTPro-Bold.otf") format("opentype");
 }
 
+h1 {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+}
+
 h2 {
     font-size: 14px;
+    line-height: 22px;
     margin: 0;
+}
+
+h4, p {
+    font-size: 13px;
+    line-height: 18px;
 }

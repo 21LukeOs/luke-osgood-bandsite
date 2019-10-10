@@ -62,15 +62,58 @@ body {
 }
 
 
-.hero-img {
+.hero {
     height: 183px;
     background: linear-gradient(rgba(50, 50, 50, 0.5), 
-    rgba(50, 50, 50, 0.5)), url(../assets/images/concert.jpg);
+    rgba(50, 50, 50, 0.5)), url(../assets/images/concert2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    display: flex;
+    align-items: center;
+
+    &__title {
+        margin: 0 0 0 16px;
+        width: 70%;
+        color: white;
+        font-family: "Avenir Next Bold";
+    }
 }
 
 .main {
     padding: 16px;
+
+}
+
+.article-one {
+
+    &__heading-one {
+        font-family: "Avenir Next Bold";
+        margin: 16px 0 0 0;
+    }
+
+    &__img {
+        width: 288px;
+        margin: 24px 0 0 0;
+    }
+
+    &__quote {
+        margin: 24px 0 0 0;
+        font-family: "Avenir Next Bold";
+    }
+
+    &__quoted {
+        margin: 32px 0 0 0;
+        font-family: "Avenir Next Demi";
+    }
+
+    &__text-heading {
+        margin: 40px 0 0 0;
+        font-family: "Avenir Next Bold";
+    }
+
+    &__article-one__para {
+        margin: 24px 0 0 0;
+    }
 }

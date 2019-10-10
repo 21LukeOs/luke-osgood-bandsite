@@ -13,9 +13,21 @@
   src: url("../assets/fonts/Avenir/AvenirNextLTPro-Bold.otf") format("opentype");
 }
 
+h1 {
+  font-size: 24px;
+  line-height: 32px;
+  margin: 0;
+}
+
 h2 {
   font-size: 14px;
+  line-height: 22px;
   margin: 0;
+}
+
+h4, p {
+  font-size: 13px;
+  line-height: 18px;
 }
 
 html {
@@ -82,16 +94,58 @@ body {
   color: white;
 }
 
-.hero-img {
+.hero {
   height: 183px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(50, 50, 50, 0.5)), to(rgba(50, 50, 50, 0.5))), url(../assets/images/concert.jpg);
-  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../assets/images/concert.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(50, 50, 50, 0.5)), to(rgba(50, 50, 50, 0.5))), url(../assets/images/concert2.jpg);
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../assets/images/concert2.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero__title {
+  margin: 0 0 0 16px;
+  width: 70%;
+  color: white;
+  font-family: "Avenir Next Bold";
 }
 
 .main {
   padding: 16px;
+}
+
+.article-one__heading-one {
+  font-family: "Avenir Next Bold";
+  margin: 16px 0 0 0;
+}
+
+.article-one__img {
+  width: 288px;
+  margin: 24px 0 0 0;
+}
+
+.article-one__quote {
+  margin: 24px 0 0 0;
+  font-family: "Avenir Next Bold";
+}
+
+.article-one__quoted {
+  margin: 32px 0 0 0;
+  font-family: "Avenir Next Demi";
+}
+
+.article-one__text-heading {
+  margin: 40px 0 0 0;
+  font-family: "Avenir Next Bold";
+}
+
+.article-one__article-one__para {
+  margin: 24px 0 0 0;
 }
 /*# sourceMappingURL=styles.css.map */
