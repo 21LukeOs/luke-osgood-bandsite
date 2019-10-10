@@ -1,0 +1,76 @@
+@import "fonts.scss";
+@import "variables.scss";
+@import "mixins.scss";
+
+
+html {
+    box-sizing: border-box;
+    font-family: "Avenir Next Regular";
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    height: 80px;
+    background: #323232;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+    &__logo-wrap {
+        padding-top: 15px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__logo {
+        
+    }
+
+    &__nav {
+
+    }
+
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        // justify-content: space-around;
+    }
+
+    &__list-items {
+        margin: 0;
+        padding: 16px 0 6px 0;
+        width: 50%;
+        text-align: center;
+        color: #afafaf;
+    }
+
+    &__list-items:nth-child(1) {
+        border-bottom: 5px solid white;
+        color: white;
+    }
+
+}
+
+
+.hero-img {
+    height: 183px;
+    background: linear-gradient(rgba(50, 50, 50, 0.5), 
+    rgba(50, 50, 50, 0.5)), url(../assets/images/concert.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main {
+    padding: 16px;
+}
