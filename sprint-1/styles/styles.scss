@@ -82,11 +82,15 @@ body {
 }
 
 .main {
-    padding: 16px;
+    
 
+    &__article-two {
+        margin: 24px 0 0 0;
+    }
 }
 
 .article-one {
+    padding: 16px;
 
     &__heading-one {
         font-family: "Avenir Next Bold";
@@ -113,7 +117,25 @@ body {
         font-family: "Avenir Next Bold";
     }
 
-    &__article-one__para {
+    &__para {
         margin: 24px 0 0 0;
+    }
+}
+
+.article-two {
+    background: #fafafa;
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+
+    &__heading-two {
+        margin: 16px 0 8px 0;
+        font-family: "Avenir Next Bold";
+    }
+
+    &__img {
+        width: 288px;
+        margin: 16px 0 0 0;
     }
 }
