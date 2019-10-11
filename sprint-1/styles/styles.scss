@@ -4,138 +4,141 @@
 
 
 html {
-    box-sizing: border-box;
-    font-family: "Avenir Next Regular";
+  box-sizing: border-box;
+  font-family: "Avenir Next Regular";
 }
 
 *, *::before, *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
-    margin: 0;
+  margin: 0;
 }
 
 .header {
-    height: 80px;
-    background: #323232;
+  height: 80px;
+  background: #323232;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+  &__logo-wrap {
+    padding-top: 14px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-content: center;
+  }
 
-    &__logo-wrap {
-        padding-top: 14px;
-        display: flex;
-        justify-content: center;
-    }
+  &__logo {
+      
+  }
 
-    &__logo {
-        
-    }
+  &__nav {
 
-    &__nav {
+  }
 
-    }
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
 
-    &__list {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        // justify-content: space-around;
-    }
+  &__list-items {
+    margin: 0;
+    padding: 16px 0 4px 0;
+    width: 50%;
+    text-align: center;
+    color: #afafaf;
+  }
 
-    &__list-items {
-        margin: 0;
-        padding: 16px 0 4px 0;
-        width: 50%;
-        text-align: center;
-        color: #afafaf;
-    }
-
-    &__list-items:nth-child(1) {
-        border-bottom: 5px solid white;
-        color: white;
-    }
+  &__list-items:nth-child(1) {
+    border-bottom: 5px solid white;
+    color: white;
+  }
 
 }
 
 
 .hero {
-    height: 183px;
-    background: linear-gradient(rgba(50, 50, 50, 0.5), 
-    rgba(50, 50, 50, 0.5)), url(../assets/images/concert2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  height: 183px;
+  background: linear-gradient(rgba(50, 50, 50, 0.5), 
+  rgba(50, 50, 50, 0.5)), url(../assets/images/concert2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    &__title {
-        margin: 0 0 0 16px;
-        width: 70%;
-        color: white;
-        font-family: "Avenir Next Bold";
-    }
+  &__title {
+    margin: 0 0 0 16px;
+    width: 70%;
+    color: white;
+    font-family: "Avenir Next Bold";
+  }
 }
 
 .main {
     
 
-    &__article-two {
-        margin: 24px 0 0 0;
-    }
+  &__article-two {
+    margin: 24px 0 0 0;
+  }
 }
 
 .article-one {
-    padding: 16px;
+  padding: 16px;
 
-    &__heading-one {
-        font-family: "Avenir Next Bold";
-        margin: 16px 0 0 0;
-    }
+  &__heading-one {
+    font-family: "Avenir Next Bold";
+    margin: 16px 0 0 0;
+  }
 
-    &__img {
-        width: 100%;
-        margin: 24px 0 0 0;
-    }
+  &__img {
+    width: 100%;
+    margin: 24px 0 0 0;
+  }
 
-    &__quote {
-        margin: 24px 0 0 0;
-        font-family: "Avenir Next Bold";
-    }
+  &__quote {
+    margin: 24px 0 0 0;
+    font-family: "Avenir Next Bold";
+  }
 
-    &__quoted {
-        margin: 32px 0 0 0;
-        font-family: "Avenir Next Demi";
-    }
+  &__quoted {
+    margin: 32px 0 0 0;
+    font-family: "Avenir Next Demi";
+  }
 
-    &__text-heading {
-        margin: 40px 0 0 0;
-        font-family: "Avenir Next Bold";
-    }
+  &__text-heading {
+    margin: 40px 0 0 0;
+    font-family: "Avenir Next Bold";
+  }
 
-    &__para {
-        margin: 24px 0 0 0;
-    }
+  &__para {
+    margin: 24px 0 0 0;
+  }
 }
 
 .article-two {
-    background: #fafafa;
-    padding: 16px;
+  background: #fafafa;
+  padding: 16px;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    &__heading-two {
-        margin: 16px 0 8px 0;
-        font-family: "Avenir Next Bold";
-    }
+  &__heading-two {
+    margin: 16px 0 8px 0;
+    font-family: "Avenir Next Bold";
+  }
 
-    &__img {
-        width: 100%;
-        margin: 16px 0 0 0;
-    }
+  &__img {
+    width: 100%;
+    margin: 16px 0 0 0;
+  }
+}
+
+.footer {
+  padding: 12px;
 }
