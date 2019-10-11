@@ -63,7 +63,7 @@ body {
 }
 
 .header__logo-wrap {
-  padding-top: 15px;
+  padding-top: 14px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,7 +83,7 @@ body {
 
 .header__list-items {
   margin: 0;
-  padding: 16px 0 6px 0;
+  padding: 16px 0 4px 0;
   width: 50%;
   text-align: center;
   color: #afafaf;
@@ -130,7 +130,7 @@ body {
 }
 
 .article-one__img {
-  width: 288px;
+  width: 100%;
   margin: 24px 0 0 0;
 }
 
@@ -171,7 +171,7 @@ body {
 }
 
 .article-two__img {
-  width: 288px;
+  width: 100%;
   margin: 16px 0 0 0;
 }
 /*# sourceMappingURL=styles.css.map */
