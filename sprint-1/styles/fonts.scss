@@ -1,3 +1,5 @@
+@import "mixins.scss";
+
 @font-face {
   font-family: "Avenir Next Regular";
   src: url("../assets/fonts/Avenir/AvenirNextLTPro-Regular.otf") format("opentype");
@@ -33,3 +35,6 @@ h4, p {
   margin: 0;
 }
 
+@include tablet() {
+  @include tab-desk-fonts();
+}
