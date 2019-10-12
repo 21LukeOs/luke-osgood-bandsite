@@ -55,7 +55,15 @@ body {
 
   &__list-items:nth-child(1) {
     border-bottom: 5px solid white;
-    color: white;
+  }
+
+  &__link1, &__link2 {
+    text-decoration: none;
+    color: #afafaf; 
+  }
+
+  &__link1 {
+    color: white; 
   }
 
 }
@@ -137,10 +145,40 @@ body {
     width: 100%;
     margin: 16px 0 0 0;
   }
+
+  &__img:last-child {
+    margin-bottom: 32px;
+  }
 }
 
 .footer {
   padding: 12px;
   background: #323232;
   color: white;
+
+  &__heading {
+    margin-top: 32px;
+    font-family: "Avenir Next Bold";
+    font-size: 32px;
+  }
+
+  &__social-wrap {
+    width: 40%;
+    margin: 32px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__contact {
+    margin-top: 24px;
+    font-family: "Avenir Next Demi";
+  }
+
+  &__info {
+    margin-top: 24px;
+  }
+
+  &__copyright {
+    margin: 32px 0 20px 0;
+  }
 }
