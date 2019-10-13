@@ -46,8 +46,10 @@ body {
   }
 
   &__nav {
-    display: flex;
-    align-items: center;
+    @include tablet() {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__list {
