@@ -24,10 +24,21 @@ body {
   justify-content: center;
   align-content: center;
 
+  @include tablet() {
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+  }
+
   &__logo-wrap {
-    padding-top: 14px;
+    padding-top: 15px;
     display: flex;
     justify-content: center;
+
+    @include tablet() {
+      padding: 0;
+      margin-left: 24px;
+    }
   }
 
   &__logo {
@@ -35,7 +46,8 @@ body {
   }
 
   &__nav {
-
+    display: flex;
+    align-items: center;
   }
 
   &__list {
@@ -47,10 +59,21 @@ body {
 
   &__list-items {
     margin: 0;
-    padding: 16px 0 4px 0;
+    padding: 16px 0 6px 0;
     width: 50%;
     text-align: center;
     color: #afafaf;
+
+    @include tablet() {
+      padding: 34px 0 23px 0;
+      margin-left: 56px;
+    }
+  }
+
+  &__h4 {
+    @include tablet() {
+      line-height: 18px;;
+    }
   }
 
   &__list-items:nth-child(1) {
@@ -80,38 +103,57 @@ body {
   display: flex;
   align-items: center;
 
+  @include tablet() {
+    height: 400px;
+  }
+
   &__title {
     margin: 0 0 0 16px;
     width: 70%;
     color: white;
     font-family: "Avenir Next Bold";
+
+    @include tablet() {
+      margin: 0 0 0 24px;
+      font-size: 60px;
+      line-height: 68px;
+    }
   }
 }
 
-.main {
-    
-
-  &__article-two {
-    margin: 24px 0 0 0;
-  }
-}
 
 .article-one {
   padding: 16px;
 
+  @include tablet() {
+    padding: 48px 24px;
+  }
+
   &__heading-one {
     font-family: "Avenir Next Bold";
     margin: 16px 0 0 0;
+
+    @include tablet() {
+      margin: 0 0 48px 0;
+    }
   }
 
   &__img {
     width: 100%;
     margin: 24px 0 0 0;
+
+    @include tablet() {
+      margin: 0;  
+    }
   }
 
   &__quote {
     margin: 24px 0 0 0;
     font-family: "Avenir Next Demi";
+
+    @include tablet() {
+      margin: 48px 0 40px 0;
+    }
   }
 
   &__quoted {
@@ -122,42 +164,98 @@ body {
   &__text-heading {
     margin: 40px 0 0 0;
     font-family: "Avenir Next Demi";
+
+    @include tablet() {
+      margin: 56px 0 32px 0;
+    }
+  }
+
+  &__para-wrap {
+    @include tablet() {
+      display: flex;
+    }
   }
 
   &__para {
     margin: 24px 0 0 0;
+
+    @include tablet() {
+      margin: 0;
+    }
+  }
+
+  &__para-two {
+    @include tablet() {
+      margin-left: 24px;
+    }
   }
 }
 
 .article-two {
   background: #fafafa;
   padding: 16px;
+  margin: 24px 0 0 0;
 
   display: flex;
   flex-direction: column;
 
+  @include tablet() {
+    padding: 48px 24px 40px 24px;
+    margin: 0;
+  }
+
   &__heading-two {
     margin: 16px 0 8px 0;
     font-family: "Avenir Next Bold";
+
+    @include tablet() {
+      margin: 0;
+    }
+  }
+
+  &__img-wrap {
+    @include tablet() {
+      margin-top: 64px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
   }
 
   &__img {
     width: 100%;
     margin: 16px 0 0 0;
+
+    @include tablet() {
+      width: calc(33.33% - 16px);
+      // width: 224px;
+      margin: 0;
+    }
+  }
+
+  &__img:nth-child(n + 4) {
+    margin-top: 24px;
   }
 
   &__img:last-child {
     margin-bottom: 32px;
+
+    @include tablet() {
+      margin-bottom: 0;
+    }
   }
 }
 
 .footer {
-  padding: 4%;
+  padding: 48px 4%;
   background: #323232;
   color: white;
 
+  @include tablet() {
+    padding: 48px 24px;
+  }
+
   &__heading {
-    margin-top: 32px;
     font-family: "Avenir Next Bold";
     font-size: 32px;
   }
@@ -179,6 +277,6 @@ body {
   }
 
   &__copyright {
-    margin: 32px 0 20px 0;
+    margin-top: 32px;
   }
 }
