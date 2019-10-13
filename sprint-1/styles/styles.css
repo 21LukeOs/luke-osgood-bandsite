@@ -118,6 +118,12 @@ body {
   }
 }
 
+@media screen and (min-width: 1440px) {
+  .header__logo {
+    margin-left: 180px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .header__nav {
     display: -webkit-box;
@@ -233,7 +239,7 @@ body {
 
 @media screen and (min-width: 1440px) {
   .article-one {
-    padding: 48px 272px;
+    padding: 48px 180px;
   }
 }
 
@@ -245,6 +251,12 @@ body {
 @media screen and (min-width: 768px) {
   .article-one__heading-one {
     margin: 0 0 48px 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .article-one__wrap {
+    padding: 0 92px;
   }
 }
 

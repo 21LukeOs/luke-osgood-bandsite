@@ -39,6 +39,10 @@ body {
       padding: 0;
       margin-left: 24px;
     }
+
+    @include desktop() {
+      margin-left: 180px;
+    }
   }
 
   &__nav {
@@ -137,7 +141,7 @@ body {
   }
 
   @include desktop() {
-    padding: 48px 272px;
+    padding: 48px 180px;
   }
 
   &__heading-one {
@@ -146,6 +150,12 @@ body {
 
     @include tablet() {
       margin: 0 0 48px 0;
+    }
+  }
+
+  &__wrap {
+    @include desktop() {
+      padding: 0 92px;
     }
   }
 
