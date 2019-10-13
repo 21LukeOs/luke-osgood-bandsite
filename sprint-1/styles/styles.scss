@@ -63,7 +63,7 @@ body {
     color: #afafaf;
 
     @include tablet() {
-      padding: 34px 0 23px 0;
+      padding: 34px 7px 23px 7px;
       margin-left: 56px;
     }
   }
@@ -105,6 +105,10 @@ body {
     height: 400px;
   }
 
+  @include desktop() {
+    height: 670px;  
+  }
+
   &__title {
     margin: 0 0 0 16px;
     width: 70%;
@@ -116,6 +120,11 @@ body {
       font-size: 60px;
       line-height: 68px;
     }
+
+    @include desktop() {
+      margin: 0 0 0 180px;
+      width: 40%;  
+    }
   }
 }
 
@@ -125,6 +134,10 @@ body {
 
   @include tablet() {
     padding: 48px 24px;
+  }
+
+  @include desktop() {
+    padding: 48px 272px;
   }
 
   &__heading-one {
@@ -145,12 +158,25 @@ body {
     }
   }
 
+  &__img-wrap {
+    @include tablet() {
+      height: 362px;
+      overflow: hidden;  
+    }
+
+    @include desktop() {
+      height: 450px;
+      overflow: hidden;
+    }
+  }
+
   &__quote {
     margin: 24px 0 0 0;
     font-family: "Avenir Next Demi";
 
     @include tablet() {
       margin: 48px 0 40px 0;
+      width: 90%;
     }
   }
 
@@ -186,6 +212,10 @@ body {
     @include tablet() {
       margin-left: 24px;
     }
+
+    @include desktop() {
+      margin: 0 0 0 40px;
+    }
   }
 }
 
@@ -200,6 +230,10 @@ body {
   @include tablet() {
     padding: 48px 24px 40px 24px;
     margin: 0;
+  }
+
+  @include desktop() {
+    padding: 48px 180px 40px 180px;
   }
 
   &__heading-two {
@@ -231,7 +265,9 @@ body {
   }
 
   &__img:nth-child(n + 4) {
-    margin-top: 24px;
+    @include tablet() {
+      margin-top: 24px;
+    }
   }
 
   &__img:last-child {
@@ -250,6 +286,10 @@ body {
 
   @include tablet() {
     padding: 48px 24px;
+  }
+
+  @include desktop() {
+    padding: 48px 180px;
   }
 
   &__heading {
@@ -300,9 +340,9 @@ body {
       margin-top: 32px;
     }
 
-    // @include desktop() {
-    //   width: 70%;
-    // }
+    @include desktop() {
+      width: 70%;
+    }
   }
 
   &__contact {
