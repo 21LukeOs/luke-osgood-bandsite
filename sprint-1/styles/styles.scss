@@ -30,7 +30,7 @@ body {
     align-items: center;
   }
 
-  &__logo-wrap {
+  &__logo {
     padding-top: 15px;
     display: flex;
     justify-content: center;
@@ -39,10 +39,6 @@ body {
       padding: 0;
       margin-left: 24px;
     }
-  }
-
-  &__logo {
-      
   }
 
   &__nav {
@@ -230,7 +226,6 @@ body {
 
     @include tablet() {
       width: calc(33.33% - 16px);
-      // width: 224px;
       margin: 0;
     }
   }
@@ -267,6 +262,47 @@ body {
     margin: 32px 0;
     display: flex;
     justify-content: space-between;
+
+    @include tablet() {
+      margin: 0 0 0 30px;
+      width: auto;
+      
+    }
+  }
+
+  &__social {
+    @include tablet() {
+      margin-left: 32px;
+    }
+  }
+
+  &__logo {
+    display: none;
+    height: 24px;
+
+    @include tablet() {
+      display: inline-flex;
+      margin-left: auto; 
+    }
+  }
+
+  &__head-social-logo {
+    @include tablet() {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__contacts {
+    @include tablet() {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 32px;
+    }
+
+    // @include desktop() {
+    //   width: 70%;
+    // }
   }
 
   &__contact {
@@ -280,5 +316,17 @@ body {
 
   &__copyright {
     margin-top: 32px;
+
+    @include tablet() {
+      display: flex;
+      margin-top: 40px;
+    }
+  }
+
+  &__copyright-p {
+
+    @include tablet() {
+      margin-left: 5px;
+    }
   }
 }
