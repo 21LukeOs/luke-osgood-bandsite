@@ -18,7 +18,7 @@ body {
 
 .header {
   height: 80px;
-  background: #323232;
+  background: $themecolor1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,7 +30,7 @@ body {
     align-items: center;
   }
 
-  &__logo {
+  &__logo-link {
     padding-top: 15px;
     display: flex;
     justify-content: center;
@@ -64,7 +64,7 @@ body {
     padding: 16px 0 6px 0;
     width: 50%;
     text-align: center;
-    color: #afafaf;
+    color: $themecolor2;
 
     @include tablet() {
       padding: 34px 7px 23px 7px;
@@ -84,7 +84,7 @@ body {
 
   &__link1, &__link2 {
     text-decoration: none;
-    color: #afafaf; 
+    color: $themecolor2; 
   }
 
   &__link1 {
@@ -216,6 +216,10 @@ body {
     @include tablet() {
       margin: 0;
     }
+
+    @include desktop() {
+      padding-right: 8px;
+    }
   }
 
   &__para-two {
@@ -230,7 +234,7 @@ body {
 }
 
 .article-two {
-  background: #fafafa;
+  background: $themecolor3;
   padding: 16px;
   margin: 24px 0 0 0;
 
@@ -272,6 +276,14 @@ body {
       width: calc(33.33% - 16px);
       margin: 0;
     }
+
+    @include desktop {
+      filter: grayscale(70%);
+    }
+  }
+
+  &__img:hover {
+    filter: none;
   }
 
   &__img:nth-child(n + 4) {
@@ -291,7 +303,7 @@ body {
 
 .footer {
   padding: 48px 4%;
-  background: #323232;
+  background: $themecolor1;
   color: white;
 
   @include tablet() {
@@ -362,6 +374,11 @@ body {
 
   &__info {
     margin-top: 24px;
+  }
+
+  &__email {
+    text-decoration: none;
+    color: white;
   }
 
   &__copyright {
