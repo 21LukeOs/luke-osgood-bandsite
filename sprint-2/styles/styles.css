@@ -31,6 +31,11 @@ h4, p {
   margin: 0;
 }
 
+h5 {
+  font-size: 12px;
+  line-height: 20px;
+}
+
 @media screen and (min-width: 768px) {
   h1 {
     font-size: 36px;
@@ -225,10 +230,6 @@ body {
     margin: 0 0 0 180px;
     width: 40%;
   }
-}
-
-.hero__music {
-  margin-left: 64px;
 }
 
 .article-one {
@@ -442,6 +443,124 @@ body {
   .article-two__img:last-child {
     margin-bottom: 0;
   }
+}
+
+.join-conv {
+  padding: 0 16px;
+  margin-bottom: 40px;
+}
+
+.join-conv__wrapper {
+  margin: 0 auto;
+}
+
+.join-conv__title {
+  margin: 32px 0 40px 0;
+  font-family: "Avenir Next Bold";
+}
+
+.join-conv__comments {
+  width: 100%;
+  border-bottom: 1px solid #E1E1E1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.join-conv__name-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.join-conv__label-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.join-conv__img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 22px 10px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.join-conv__name-label, .join-conv__comment-label {
+  font-size: 12px;
+  line-height: 20px;
+  color: #AFAFAF;
+}
+
+.join-conv__input {
+  padding: 14px 15px;
+  border: 1px solid #E1E1E1;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.join-conv__input:focus {
+  border: 2px solid black;
+  outline: transparent;
+}
+
+.join-conv__button {
+  background-color: #323232;
+  color: white;
+  padding: 16px 0px;
+  margin: 16px 0 32px 0;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.join-conv__comment-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.join-conv__comment-list-item {
+  padding: 24px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #E1E1E1;
+}
+
+.join-conv__comment-img {
+  background-color: #E1E1E1;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.join-conv__comment-name-date {
+  margin-bottom: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.join-conv__comment-date {
+  color: #AFAFAF;
 }
 
 .footer {

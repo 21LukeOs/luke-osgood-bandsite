@@ -130,11 +130,6 @@ body {
       width: 40%;  
     }
   }
-
-  // Shows
-  &__music {
-    margin-left: 64px;
-  }
 }
 
 
@@ -303,6 +298,117 @@ body {
     @include tablet() {
       margin-bottom: 0;
     }
+  }
+}
+
+.join-conv {
+  padding: 0 16px;
+  margin-bottom: 40px;
+
+  &__wrapper {
+    margin: 0 auto;
+    // width: 80%;
+  }
+
+  &__title {
+    margin: 32px 0 40px 0;
+    font-family: "Avenir Next Bold";
+  }
+
+  &__comments {
+    width: 100%;
+    border-bottom: 1px solid $themecolor4; 
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__name-wrap {
+    display: flex;
+    
+  }
+
+  &__label-input {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 22px 10px 0 0;
+    object-fit: cover;
+  }
+
+  &__name-label, &__comment-label {
+    font-size: 12px;
+    line-height: 20px;
+    color: $themecolor2;
+  }
+
+  &__input {
+    padding: 14px 15px;
+    border: 1px solid $themecolor4;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+
+  &__input:focus {
+    border: 2px solid black;
+    outline: transparent;
+  }
+
+  &__button {
+    background-color: $themecolor1;
+    color: white;
+    padding: 16px 0px;
+    margin: 16px 0 32px 0;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  &__comment-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  &__comment-list-item {
+    // width: 100%;
+    padding: 24px 0;
+    display: flex;
+    border-bottom: 1px solid $themecolor4;
+  }
+
+  &__comment-img {
+    background-color: $themecolor4;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  &__comment-name-text {
+    // width: 80%;
+  }
+
+  &__comment-name-date {
+    margin-bottom: 16px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__comment-name {
+
+  }
+
+  &__comment-date {
+    color: $themecolor2;
+
   }
 }
 
