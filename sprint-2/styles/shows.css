@@ -192,7 +192,7 @@ h5 {
 
 @media screen and (min-width: 768px) {
   .shows__headings {
-    width: 62%;
+    width: calc(100% - 160px);
     color: #AFAFAF;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -204,6 +204,12 @@ h5 {
         -ms-flex-align: center;
             align-items: center;
     margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .shows__heading {
+    width: 33.33%;
   }
 }
 
@@ -243,6 +249,12 @@ h5 {
   line-height: 22px;
 }
 
+@media screen and (min-width: 768px) {
+  .shows__current-date {
+    width: 25%;
+  }
+}
+
 .shows__venue {
   color: #AFAFAF;
   margin: 0;
@@ -258,6 +270,12 @@ h5 {
   margin: 16px 0 24px 0;
 }
 
+@media screen and (min-width: 768px) {
+  .shows__current-venue {
+    width: 25%;
+  }
+}
+
 .shows__location {
   color: #AFAFAF;
   margin: 0;
@@ -271,6 +289,12 @@ h5 {
 
 .shows__current-location {
   margin: 16px 0 24px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .shows__current-location {
+    width: 25%;
+  }
 }
 
 .shows__buy-button {

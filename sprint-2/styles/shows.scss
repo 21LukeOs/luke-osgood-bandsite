@@ -99,12 +99,18 @@
     display: none;
 
     @include tablet() {
-      width: 62%;
+      width: calc(100% - 160px);
       color: $themecolor2;
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 16px;
+    }
+  }
+
+  &__heading {
+    @include tablet() {
+      width: 33.33%;
     }
   }
 
@@ -132,6 +138,10 @@
     margin: 16px 0 24px 0;
     font-size: 14px;
     line-height: 22px;
+
+    @include tablet() {
+      width: 25%;
+    }
   }
 
   &__venue {
@@ -145,6 +155,10 @@
 
   &__current-venue {
     margin: 16px 0 24px 0;
+
+    @include tablet() {
+      width: 25%;
+    }
   }
 
   &__location {
@@ -158,6 +172,10 @@
 
   &__current-location {
     margin: 16px 0 24px 0;
+
+    @include tablet() {
+      width: 25%;
+    }
   }
 
   &__buy-button {

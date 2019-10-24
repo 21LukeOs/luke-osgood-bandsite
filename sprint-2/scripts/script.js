@@ -3,56 +3,123 @@
 let comments = [
   {
     name: 'Michael Lyons',
-    comment: 'They BLEW the ROOF off at their last show'
-  }
+    comment: 'They BLEW the ROOF off at their last show',
+    timestamp: '23/02/1931'
+  },
+  {
+    name: 'Chad Montgomery',
+    comment: 'They were pretty alright...ya know?',
+    timestamp: '4/11/1963'
+  },
+  {
+    name: 'Dorthy Everett',
+    comment: 'Complete and utter garbage, and boy do I love me some hot garbage',
+    timestamp: '12/09/1979'
+  },
 ];
 
-let commentForm = document.querySelector('.join-conv__comments');
+function printDate() {
+  const currentDate = new Date();
+  const day = currentDate.getDate();
+  const month = currentDate.getMonth();
+  const year = currentDate.getFullYear();
 
-function submit(e) {
-  e.preventDefault();
-  let commentorName = document.querySelector(".join-conv__input1").value;
-  let commentorComment = document.querySelector(".join-conv__input2").value;
+  return `${day}/${month}/${year}`;
+};
 
-  comments.push({
-    name: commentorName,
-    comment: commentorComment
-  });
+
+
+
+const commentForm = document.querySelector('.join-conv__comments');
+
+commentForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const commentorName = event.target.name;
+  const commentorComment = event.target.comment;
+
+  const commentName = commentorName.value;
+  const commentComment = commentorComment.value;
 
   document.querySelector(".join-conv__input1").value = "";
-
   document.querySelector(".join-conv__input2").value = "";
-
-  let newComment = {
-    name: commentorName,
-    comment: commentorComment
+  
+  if (commentName === '' || commentComment === '') {
+    return;
   }
-  displayComments(newComment);
+
+  postComment(commentName, commentComment);
+  // clearsComments();
+  // displayComment();
+
+
+});
+
+function postComment(name, comment) {
+  comments.push({
+    name: name,
+    comment: comment,
+    timestamp: printDate()
+  });
 }
 
-console.log(comments);
+function clearsComments() {
+  const list = document.querySelector('.join-conv__comment-list');
+  list.removeChild();
+}
 
-commentForm.addEventListener('submit', submit);
+function makeCommentNode(name, comment, timestamp) {
+  let nameAndComment = document.createElement('div');
+  nameAndComment.setAttribute('class', 'join-conv__comment-name-text');
 
-function displayComments(comment) {
+  let nameAndDate = document.createElement('div');
+  nameAndDate.setAttribute('class', 'join-conv__comment-name-date');
 
-  
-  document.querySelector(".join-conv__comment-list").innerHTML = "";
-  comments.forEach((comment) =>{
-    let comment1 = document.createElement('li');
-    comment1.innerHTML = `
-    <li class="join-conv__comment-list-item">
-    <div class="join-conv__comment-img">
-      <img src="" alt="">
-    </div>
-    <div class="join-conv__comment-name-text">
-      <div class="join-conv__comment-name-date">
-        <h4 class="join-conv__comment-name">${comment.name}</h4>
-        <h4 class="join-conv__comment-date">12/18/2018</h4>
-      </div>
-      <p class="join-conv__comment-text">${comment.comment}</p>
-    </div>
-    `
-    document.querySelector(".join-conv__comment-list").appendChild(comment1);
-  });
-};
+  let comName = document.createElement('h4');
+  comName.setAttribute('class', 'join-conv__comment-name');
+  comName.textContent = name;
+
+  let comDate = document.createElement('h4');
+  comDate.setAttribute('class', 'join-conv__comment-date');
+  comDate.textContent = timestamp
+
+  let comComment = document.createElement('p');
+  comComment.setAttribute('class', 'join-conv__comment-text');
+  comComment.textContent = comment;
+
+  nameAndComment.appendChild(nameAndDate);
+  nameAndComment.appendChild(comComment);
+
+  nameAndDate.appendChild(comName);
+  nameAndDate.appendChild(comDate);
+
+  return nameAndComment;
+}
+
+function makeListItemNode() {
+  const list = document.querySelector('.join-conv__comment-list');
+
+  const listItem = document.createElement('li');
+  listItem.setAttribute('class', 'join-conv__comment-list-item');
+
+  const imgDiv = document.createElement('div');
+  imgDiv.setAttribute('class', 'join-conv__comment-img');
+
+  const img = document.createElement('img');
+  img.setAttribute('class', '.join-conv__img');
+
+  imgDiv.appendChild(makeCommentNode());
+
+  return list;
+}
+
+console.log(makeListItemNode());
+
+function displayComment(comments) {
+  for (let i = 0; i < comments.length; i++) {
+    
+  }
+}
+
+
+
+
