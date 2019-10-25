@@ -4,7 +4,7 @@ let comments = [
   {
     name: 'Michael Lyons',
     comment: 'They BLEW the ROOF off at their last show',
-    timestamp: '23/02/1931'
+    timestamp: '23/02/1979'
   },
   {
     name: 'Chad Montgomery',
@@ -13,10 +13,12 @@ let comments = [
   },
   {
     name: 'Dorthy Everett',
-    comment: 'Complete and utter garbage, and boy do I love me some hot garbage',
-    timestamp: '12/09/1979'
+    comment: 'Perfection',
+    timestamp: '12/09/1931'
   },
 ];
+
+
 
 function printDate() {
   const currentDate = new Date();
@@ -48,14 +50,13 @@ commentForm.addEventListener('submit', (event) => {
   }
 
   postComment(commentName, commentComment);
-  // clearsComments();
-  // displayComment();
-
+  clearsComments();
+  displayComment(comments);
 
 });
 
 function postComment(name, comment) {
-  comments.push({
+  comments.unshift({
     name: name,
     comment: comment,
     timestamp: printDate()
@@ -63,8 +64,10 @@ function postComment(name, comment) {
 }
 
 function clearsComments() {
-  const list = document.querySelector('.join-conv__comment-list');
-  list.removeChild();
+  let element = document.querySelector('.join-conv__comment-list');
+  while (element.firstChild) {
+  element.removeChild(element.firstChild);
+}
 }
 
 function makeCommentNode(name, comment, timestamp) {
@@ -92,34 +95,29 @@ function makeCommentNode(name, comment, timestamp) {
   nameAndDate.appendChild(comName);
   nameAndDate.appendChild(comDate);
 
-  return nameAndComment;
-}
+  let list = document.querySelector('.join-conv__comment-list');
 
-function makeListItemNode() {
-  const list = document.querySelector('.join-conv__comment-list');
-
-  const listItem = document.createElement('li');
+  let listItem = document.createElement('li');
   listItem.setAttribute('class', 'join-conv__comment-list-item');
 
-  const imgDiv = document.createElement('div');
+  let imgDiv = document.createElement('div');
   imgDiv.setAttribute('class', 'join-conv__comment-img');
 
-  const img = document.createElement('img');
+  let img = document.createElement('img');
   img.setAttribute('class', '.join-conv__img');
 
-  imgDiv.appendChild(makeCommentNode());
+  imgDiv.appendChild(img);
 
-  return list;
+  listItem.appendChild(imgDiv);
+  listItem.appendChild(nameAndComment);
+
+  list.appendChild(listItem);
+
 }
-
-console.log(makeListItemNode());
 
 function displayComment(comments) {
   for (let i = 0; i < comments.length; i++) {
-    
+    let com = comments[i];
+    makeCommentNode(com.name, com.comment, com.timestamp);
   }
 }
-
-
-
-
