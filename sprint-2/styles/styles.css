@@ -618,6 +618,10 @@ body {
   color: #AFAFAF;
 }
 
+.join-conv__comment-text {
+  overflow-wrap: break-word;
+}
+
 .footer {
   padding: 48px 4%;
   background: #323232;

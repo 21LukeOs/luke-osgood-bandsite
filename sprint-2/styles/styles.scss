@@ -432,13 +432,13 @@ body {
     justify-content: space-between;
   }
 
-  &__comment-name {
-
-  }
-
   &__comment-date {
     color: $themecolor2;
 
+  }
+
+  &__comment-text {
+    overflow-wrap: break-word;
   }
 }
 
