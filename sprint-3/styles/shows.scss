@@ -6,6 +6,11 @@
 
 .hero {
   height: 472px;
+  background: linear-gradient(rgba(50, 50, 50, 0.5), 
+  rgba(50, 50, 50, 0.5)), url(../assets/images/concert3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 16px;
 
   display: flex;
