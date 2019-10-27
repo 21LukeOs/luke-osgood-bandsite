@@ -6,10 +6,8 @@ getShows = () => {
 
   axios.get(apiURL + shows + apiKey)
   .then(response => {
-    console.log(response.data);
     let show = response.data;
     show.forEach(item => {
-      // let date = moment(item.date).format('ddd MMM do');
       makeShowNode(item.date, item.place, item.location);
     })
   })
