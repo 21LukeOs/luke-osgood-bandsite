@@ -1,0 +1,196 @@
+@import "fonts.scss";
+@import "variables.scss";
+@import "mixins.scss";
+
+
+
+.hero {
+  height: 472px;
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  @include tablet() {
+    height: 670px;
+    padding: 24px;
+  }
+
+  @include desktop() {
+    padding: 0 180px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__subtitle {
+    color: white;
+
+    @include tablet() {
+      font-family: "Avenir Next Bold";
+    }
+
+    @include desktop() {
+      margin: 0;
+    }
+  }
+
+  &__title {
+    margin: 24px 0 0 0;
+    width: 90%;
+
+    @include tablet() {
+      margin: 48px 0;
+    }
+
+    @include desktop() {
+      width: 100%;
+    }
+  }
+  
+  &__music {
+    width: 100%;
+    margin-top: 64px;
+
+    @include tablet() {
+      width: 60%;
+      margin-top: 0;
+    }
+
+    @include desktop() {
+      width: 100%;
+      margin: 48px 0 0 64px;
+    }
+  }
+}
+
+.shows {
+  padding: 0 16px;
+  margin-bottom: 32px;
+
+  @include tablet() {
+    padding: 0 24px;
+  }
+
+  @include desktop() {
+    padding: 0 180px;
+    display: flex;
+  }
+
+  &__title {
+    margin: 32px 0 40px 0;
+
+    @include tablet() {
+      margin: 48px 0 40px 0;
+    }
+
+  }
+
+  &__wrap {
+    
+    @include desktop() {
+      width: 80%;
+      margin: 48px 0 0 180px;
+    }
+  }
+
+  &__headings {
+    display: none;
+
+    @include tablet() {
+      width: calc(100% - 160px);
+      color: $themecolor2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__heading {
+    @include tablet() {
+      width: 33.33%;
+    }
+  }
+
+  &__show {
+    border-bottom: 1px solid $themecolor4;
+
+    @include tablet() {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__date {
+    color: $themecolor2;
+    margin: 24px 0 0 0;
+    
+    @include tablet() {
+      display: none;
+    }
+  }
+
+  &__current-date {
+    margin: 16px 0 24px 0;
+    font-size: 14px;
+    line-height: 22px;
+
+    @include tablet() {
+      width: 25%;
+    }
+  }
+
+  &__venue {
+    color: $themecolor2;
+    margin: 0;
+
+    @include tablet() {
+      display: none;
+    }
+  }
+
+  &__current-venue {
+    margin: 16px 0 24px 0;
+
+    @include tablet() {
+      width: 25%;
+    }
+  }
+
+  &__location {
+    color: $themecolor2;
+    margin: 0;
+
+    @include tablet() {
+      display: none;
+    }
+  }
+
+  &__current-location {
+    margin: 16px 0 24px 0;
+
+    @include tablet() {
+      width: 25%;
+    }
+  }
+
+  &__buy-button {
+    width: 100%;
+    padding: 16px 0;
+    background-color: $themecolor1;
+    color: white;
+    padding: 16px 0px;
+    margin: 32px 0 16px 0;
+    border-radius: 5px;
+    font-size: 14px;
+
+    @include tablet() {
+      width: 160px;
+      margin-top: 0;
+    }
+  }
+}
