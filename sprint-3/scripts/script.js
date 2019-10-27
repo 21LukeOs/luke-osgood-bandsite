@@ -25,7 +25,6 @@ const apiKey = `?api_key=<91802317-77c5-4235-82ec-eb3f41f37238>`;
 const commentsApi = `comments`;
 
 getComments = () => {
-
   axios.get(apiURL + commentsApi + apiKey)
   .then(response => {
     console.log(response.data);
@@ -41,7 +40,6 @@ getComments = () => {
 }
 
 postComment = (commentName, commentComment) => {
-
   axios.post(apiURL + commentsApi + apiKey, {
     name: commentName,
     comment: commentComment

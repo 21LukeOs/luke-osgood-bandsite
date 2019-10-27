@@ -3,7 +3,6 @@ const apiKey = `?api_key=<91802317-77c5-4235-82ec-eb3f41f37238>`;
 const shows = `showdates`;
 
 getShows = () => {
-
   axios.get(apiURL + shows + apiKey)
   .then(response => {
     let show = response.data;
